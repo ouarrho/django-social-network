@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-pkj^wjom*ien=nss$0dw#e1)6br^2lcdntc+cbhoe2zeeay!)@'
+SECRET_KEY = 'django-insecure-u9m1a&ab17-kw%td-z3m!opl3ve^lg228#lm+-)@l-7#$k32sw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'base.apps.BaseConfig',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,11 @@ ROOT_URLCONF = 'socialnetwork.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+
+            BASE_DIR / 'templates'
+
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
