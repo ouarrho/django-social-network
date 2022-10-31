@@ -12,6 +12,23 @@ def home(request):
 
     return render( request, 'home.html' )
 
+def profile(request):
+
+    return render( request, 'posts.html' )
+
 def posts(request):
 
     return render( request, 'posts.html', { 'posts' : arr_posts } )
+
+def post(request, id):
+
+    return render( request, 'post.html', { 'id' : id, 'post': arr_posts[id-1] } )
+
+def signUp(request):
+
+    return render( request, 'sign-up.html' )
+
+def signIn(request):
+
+    return render( request, 'sign-in.html' )
+

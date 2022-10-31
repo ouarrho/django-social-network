@@ -8,6 +8,4 @@ urlpatterns = [
 
     path( '', include( 'base.urls' ) ),
 
-    path( 'posts/', include( 'base.urls' ) ),
-
 ]
